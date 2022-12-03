@@ -29,7 +29,7 @@ const List = () => {
           className="col-8"
           size="60"
           type="text"
-          placeholder="Add an item"
+          placeholder="Add a Task"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -41,7 +41,7 @@ const List = () => {
       <ul id="list" className="list-group col-12 mt-3">
         {items.length == 0 ? (
           <li className="list-group-item text-center">
-            Add a Task
+            New Task
           </li>
         ) : (
           items.map((item, i) => {
@@ -60,8 +60,6 @@ const List = () => {
           })
         )}
         <li className="list-group-item text-center text-black-50">{`${items.length} item left`}</li>
-        <div className="fondo1"></div>
-        <div className="fondo2"></div>
       </ul>
     </div>
   );
