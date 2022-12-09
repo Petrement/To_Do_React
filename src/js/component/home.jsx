@@ -4,7 +4,7 @@ import List from "./list.jsx";
 
 const Home = () => {
 	return (
-		<div className="container-fluid bg-secondary.bg-gradient w-25 mt-5 shadows">
+		<div className="toDoList">	
 			<List/>
 		</div>
 	);

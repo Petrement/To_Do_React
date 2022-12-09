@@ -21,24 +21,24 @@ const List = () => {
   return (
     <div className="d-inline-flex flex-column w-100 container justify-content-center align-items-center shadows">
       <div className="row">
-        <h1 className="col-12">To-Do</h1>
+        <h1 className="col-12">ToDo List</h1>
       </div>
 
       <div className="row mt-3">
         <input
-          className="col-8"
+          className="col-10"
           size="60"
           type="text"
-          placeholder="Add a Task"
+          placeholder="What needs to be done?"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button className="col-4" onClick={() => addItem()}>
+        <button className="col-2 bg-select" onClick={() => addItem()}>
           Add
         </button>
       </div>
 
-      <ul id="list" className="list-group col-12 mt-3">
+      <ul id="list" className="list-group col-5 mt-3">
         {items.length == 0 ? (
           <li className="list-group-item text-center">
             New Task
@@ -54,12 +54,14 @@ const List = () => {
                   handleRemove(e)
                 }}
               >
-               <span>{item}</span><span className="hide"><i className="fa fa-minus-square"/></span>
+               <span>{item}</span><span className="hide"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
               </li>
             );
           })
         )}
         <li className="list-group-item text-center text-black-50">{`${items.length} item left`}</li>
+        <div className="background1"></div>
+        <div className="background2"></div>
       </ul>
     </div>
   );
