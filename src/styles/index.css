@@ -1,20 +1,17 @@
-body{
-    background: greenyellow;
-}
 .hide{
     width: 0px;
     color: red;
     opacity: 0;
-    gap:10px;
-    padding-left: 25px;
+    margin-right: 10px;
 }
 li:hover span{
-    opacity: 3;
+    opacity: 1;
 }
+
 .background1{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     border-top: none;
     width:97%;
     height:0.5vh;
@@ -23,9 +20,9 @@ li:hover span{
 
 }
 .background2{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     border-top: none;
     width:94%;
     height:0.5vh;

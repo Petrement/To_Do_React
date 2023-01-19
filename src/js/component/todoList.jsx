@@ -21,27 +21,27 @@ const List = () => {
   return (
     <div className="d-inline-flex flex-column w-100 container justify-content-center align-items-center shadows">
       <div className="row">
-        <h1 className="col-12">ToDo List</h1>
+        <h1 className="col-12">To Do List</h1>
       </div>
 
       <div className="row mt-3">
         <input
-          className="col-10"
+          className="col-8"
           size="60"
           type="text"
-          placeholder="What needs to be done?"
+          placeholder="Add an item"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button className="col-2 bg-select" onClick={() => addItem()}>
+        <button className="col-4" onClick={() => addItem()}>
           Add
         </button>
       </div>
 
-      <ul id="list" className="list-group col-5 mt-3">
+      <ul id="list" className="list-group col-12 mt-3">
         {items.length == 0 ? (
           <li className="list-group-item text-center">
-            New Task
+            Add a task
           </li>
         ) : (
           items.map((item, i) => {
@@ -54,7 +54,7 @@ const List = () => {
                   handleRemove(e)
                 }}
               >
-               <span>{item}</span><span className="hide"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+               <span>{item}</span><span className="hide"><i className="fa fa-trash"/></span>
               </li>
             );
           })
